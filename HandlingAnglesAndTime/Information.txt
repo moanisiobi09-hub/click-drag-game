@@ -1,0 +1,40 @@
+-------------------
+ABOUT THIS PROGRAM:
+-------------------
+This program encodes a game. The objective is to score as many points as possible. The user can score points by overlapping an object called
+a "Gamesquare" with its "shadow" (a white outline of a congruent square). The user will have limited amount of time to score points.
+
+---------
+GAMEPLAY:
+---------
+The user is able to rotate the Gamesquare by clicking and holding on its corners and then dragging the figure. The user will be awarded points
+for rotating the Gamesquare within a certain small margin and holding it there for a small amount of time.
+
+--------
+SCORING:
+--------
+The user can score a maximum of 100 points at each turn. This is if they can move the cube within the margin in less than a certain number of 
+milliseconds [ONE_POINT_TIME]. The longer the user takes to move the box into position the less points they will score. Scoring follows this
+formula. [NOTE: TIME_TAKEN is in milliseconds].
+
+POINTS_SCORED = 100 - (TIME_TAKEN / ONE_POINT_TIME)
+
+--------
+VISUALS:
+--------
+The Gamesquare is a square. It will have four blue, bordered, circular "knobs" that will be drawn to its corners (each knob has its own bounding
+box). When the user hovers over a knob, it will turn translucent, so the user can better see the shadow. The Gamesquare will change color after
+every turn to let the user know their is a new turn. Include a fading textbox that appears at the end of every turn that includes the player's
+score for that turn and a complement based on how well they did.
+
+-------
+LABELS:
+-------
+A label will be shown that tells the user how much time they have left. Another will show their accumulated score. These will be created and
+updated from main.
+
+******* currently findTheta does not work for large circles. Fix the math in desmos.
+
+Tutorials: Here are the tutorials for this program--
+https://www.sfml-dev.org/tutorials/3.0/system/angle/
+https://www.sfml-dev.org/tutorials/3.0/system/time/
